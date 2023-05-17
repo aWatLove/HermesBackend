@@ -1,6 +1,7 @@
 package ru.suvorov.models;
 
 import lombok.Data;
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -10,8 +11,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Path {
     @Id
     private String id;
-    private City cityOut;
-    private City cityIn;
+    private String cityOut;
+    private String cityIn;
     private String[] points;
     private String time;
     private int price;
