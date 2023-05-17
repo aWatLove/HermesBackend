@@ -3,13 +3,15 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 application.properties
+.gitignore
+
 
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
-.gitignore
+
 ### Eclipse ###
 .apt_generated
 .classpath
