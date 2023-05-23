@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "flight")
 public class Flight {
     @Id
-    private ObjectId id;
+    private String id;
     private Path path;
     private String timeOut;
     private String timeIn;

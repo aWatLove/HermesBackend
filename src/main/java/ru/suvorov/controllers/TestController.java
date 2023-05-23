@@ -1,12 +1,10 @@
 package ru.suvorov.controllers;
 
 import lombok.AllArgsConstructor;
-import org.bson.types.ObjectId;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.suvorov.models.Path;
-import ru.suvorov.repository.PathRepository;
-import ru.suvorov.services.PathService;
+import ru.suvorov.services.PathServiceImpl;
 
 import java.util.List;
 
@@ -14,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @RequestMapping("/api/test")
 public class TestController {
-    private final PathService pathService;
+    private final PathServiceImpl pathServiceImpl;
 
     @GetMapping("/hello")
     public String hello() {
@@ -23,17 +21,16 @@ public class TestController {
 
     @GetMapping("/path/getAll")
     public List<Path> getAllPath() {
-        return pathService.getAllPath();
+        return pathServiceImpl.getAllPath();
     }
 
     @GetMapping("/path/add")
     public Path insertPath(@RequestBody Path path) {
-        return pathService.addPath(path);
+        return pathServiceImpl.addPath(path);
     }
 
     @DeleteMapping("/path/delete/{id}")
     public ResponseEntity<?> deletePath(@PathVariable String id) {
-        pathService.deletePath(id);
         return ResponseEntity.ok("deleted");
     }
 }
