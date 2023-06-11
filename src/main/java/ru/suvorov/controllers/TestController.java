@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.suvorov.models.Path;
-import ru.suvorov.services.PathServiceImpl;
+import ru.suvorov.services.path.PathServiceImpl;
 
 import java.util.List;
 
