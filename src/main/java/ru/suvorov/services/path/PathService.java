@@ -1,14 +1,14 @@
-package ru.suvorov.services;
+package ru.suvorov.services.path;
 
 import ru.suvorov.models.Path;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface PathService {
     List<Path> getAllPath();
 
-    List<Path> getPathByCityOut(String cityOut);
-
+//    Optional<Path> getPathByCities(String cityOut, String cityIn);
 
     Path addPath(Path path);
 
